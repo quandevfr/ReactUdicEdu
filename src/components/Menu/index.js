@@ -17,7 +17,7 @@ function index() {
     <div className="nav-menu">
       <ul className="nav-list">
         <li className="nav-item active">
-          <a href="#" className="nav-link active">
+          <a href="#" className="nav-link">
             <BiHome className="nav-icon" />
             <span>Trang chủ</span>
           </a>
@@ -29,7 +29,7 @@ function index() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link">
+          <a href="#" className="nav-link active">
             <BiUser className="nav-icon" />
             <span>Giáo viên</span>
           </a>

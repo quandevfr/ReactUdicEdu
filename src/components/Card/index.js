@@ -148,7 +148,7 @@ function index() {
           <h3>Số học sinh</h3>
           <h3>Số giờ đã dạy</h3>
           <h3>Giá theo giờ</h3>
-          <h3>Trạn thái</h3>
+          <h3>Trạng thái</h3>
           <h3>Ngày kích hoạt</h3>
         </div>
         <div className="main-card-desk-content">

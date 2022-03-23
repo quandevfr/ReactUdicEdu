@@ -177,6 +177,14 @@ section {
       text-align: start;
     }
 
+    &-card-desk-title h3:nth-child(3),
+    &-card-desk-title h3:nth-child(4),
+    &-card-desk-title h3:nth-child(5),
+    &-card-desk-title h3:nth-child(6),
+    &-card-desk-title h3:nth-child(7) {
+      text-align: center;
+    }
+
     &-card-desk-title h3 {
       font-size: $nomal-font-size;
     }
