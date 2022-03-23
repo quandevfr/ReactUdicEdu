@@ -1,0 +1,74 @@
+/* ============== IMPORTS =============== */
+// Variables
+@import "../../variables.scss";
+
+/* ============== MENU =============== */
+.nav {
+  &-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  &-icon {
+    display: none;
+  }
+
+  &-link {
+    font-size: $h3-font-size;
+    color: $text-color;
+    font-weight: $font-medium;
+    transition: 0.4s;
+  }
+
+  &-logout {
+    margin-top: $mb-2;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-icon-logout {
+    margin-right: 0.5rem;
+    color: $text-color;
+  }
+
+  &-link-logout {
+    font-size: $nomal-font-size;
+    color: $text-color;
+    font-weight: $font-regular;
+    display: flex;
+    align-items: center;
+  }
+
+  &-link-logout:hover,
+  &-link-logout:hover &-icon-logout {
+    color: $logout-color;
+  }
+
+  &-link:hover,
+  &-link.active {
+    color: $firt-color;
+  }
+
+  &-img {
+    width: 100px;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+  }
+
+  &-close-icon {
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: $text-color;
+  }
+
+  &-footer {
+    display: none;
+  }
+}

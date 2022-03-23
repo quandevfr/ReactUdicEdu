@@ -1,0 +1,79 @@
+/* ============== IMPORTS =============== */
+// Variables
+@import "../../variables.scss";
+
+/* ============== HEADER =============== */
+.header {
+  width: 100%;
+  background-color: $body-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-fixed;
+  box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
+  transition: 0.4s;
+}
+
+.nav {
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+
+  &-logo {
+    font-weight: $font-medium;
+    font-size: $h3-font-size;
+    color: $firt-color;
+  }
+
+  &-group {
+    display: flex;
+    align-items: center;
+  }
+
+  &-change-language-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.2rem 0.5rem;
+    border: none;
+    background-color: transparent;
+    margin-right: 1rem;
+  }
+
+  &-change-language-title span {
+    margin-right: 0.5rem;
+  }
+
+  &-list-language {
+    position: absolute;
+    top: 100%;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
+    display: none;
+  }
+
+  &-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+  }
+
+  &-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &-toggle {
+    color: $firt-color;
+    font-size: 1.5rem;
+    display: inline-flex;
+    cursor: pointer;
+  }
+}
