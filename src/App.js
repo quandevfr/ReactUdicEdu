@@ -1,16 +1,16 @@
 // IMPORT COMPONENTS
-import Header from "./components/Header";
+import { Routes, Route } from "react-router-dom";
+import DetailTeacher from "./Pages/DetailTeacher/DetailTeacher";
 import Menu from "./components/Menu";
-import Main from "./components/Main";
+import Home from "./Pages/Home/Home";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="group">
-        <Menu />
-        <Main />
-      </div>
+      <Routes>
+        <Route path="/detail" element={<DetailTeacher />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }

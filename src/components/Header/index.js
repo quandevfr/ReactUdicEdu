@@ -1,39 +1,62 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
+import Menu from "../Menu";
+import Main from "../Main";
 import UserImg from "../../assets/user.jpg";
 import { BiGridAlt } from "react-icons/bi";
 import { BiChevronDown } from "react-icons/bi";
 
-function index() {
+function Index() {
+  const [showLanguage, setShowLanguage] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   return (
-    <div>
-      <header class="header" id="header">
-        <nav class="nav">
+    <>
+      <header className="header" id="header">
+        <nav className="nav">
           <a href="#" className="nav-logo">
             GREENIFY
           </a>
           <div className="nav-group">
             <div className="nav-change-language">
-              <button className="nav-change-language-title">
+              <button
+                className="nav-change-language-title"
+                onClick={() => setShowLanguage(!showLanguage)}
+              >
                 <span>Tiếng việt</span>
                 <BiChevronDown />
               </button>
-              <ul className="nav-list-language">
-                <li className="nav-language-item">Tiếng Việt</li>
-                <li className="nav-language-item">Japanese</li>
-              </ul>
+              {showLanguage ? (
+                <ul className="nav-list-language">
+                  <li
+                    className="nav-language-item"
+                    onClick={() => setShowLanguage(false)}
+                  >
+                    Tiếng Việt
+                  </li>
+                  <li
+                    className="nav-language-item"
+                    onClick={() => setShowLanguage(false)}
+                  >
+                    Japanese
+                  </li>
+                </ul>
+              ) : null}
             </div>
             <div className="nav-avatar">
               <img src={UserImg} alt="" className="nav-avatar-img" />
             </div>
-            <div className="nav-toggle">
+            <div className="nav-toggle" onClick={() => setShowMenu(true)}>
               <BiGridAlt />
             </div>
           </div>
         </nav>
       </header>
-    </div>
+      <div className="group">
+        <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
+        {/* <Main /> */}
+      </div>
+    </>
   );
 }
 
-export default index;
+export default Index;
